@@ -39,6 +39,9 @@ COPY . /usr/src/app
 
 EXPOSE 8080
 
+COPY id_rsa.pub /root/.ssh/authorized_keys
+
+
 # FIN CONTENEUR À NE PAS FERMER
 #################################
 ENTRYPOINT ["/etc/bootstrap.sh"]
